@@ -1,4 +1,4 @@
-#include <stdlib.h>
+//#include <stdlib.h>
 #include <stdio.h>
 #include <GL/glut.h>
 
@@ -44,6 +44,7 @@ void desenhaCasinha() {
 
 }
 
+//TODO: alterar o desenho (opcional)
 void Desenha(void)
 {
 
@@ -116,6 +117,10 @@ void Teclado (unsigned char key, int x, int y)
         espelharImagem();
         glutPostRedisplay();        
     }    
+    if(key == 'I' || key == 'i'){
+        resetarParametrosDesenho();
+        glutPostRedisplay();        
+    }
 }
 
 void TeclasEspecias(int key, int x, int y)
@@ -140,12 +145,12 @@ void TeclasEspecias(int key, int x, int y)
 
     if(escalonar){
         if(key == GLUT_KEY_UP){
-            escalaX += 0.25f;
-            escalaY += 0.25f;
+            escalaX += 0.3f;
+            escalaY += 0.3f;
         }
         if(key == GLUT_KEY_DOWN && escalaX > 0.1 && escalaY > 0.1){
-            escalaX -= 0.25f;
-            escalaY -= 0.25f;
+            escalaX -= 0.3f;
+            escalaY -= 0.3f;
         }        
     }
 
