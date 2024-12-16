@@ -17,7 +17,7 @@ Desenvolvimento de programa que implementa transformações geometrias basicas e
     git clone https://github.com/DDMory/GLWork1.git
 ```
 
-2. acessar o arquivo `Trabalho.c` na pasta `src/` e compilar.
+2. acessar a pasta `src/` e compilar o arquivo `Trabalho.c`.
 
 ```bash
     cd src/ && gcc -o out Trabalho.c -lglut -lGL -lGLU -lm
