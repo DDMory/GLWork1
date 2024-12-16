@@ -85,6 +85,12 @@ void resetarParametrosDesenho(){
     rotacao = 0.0f;    
 }
 
+void espelharImagem(){
+    translacaoX *= -1;
+    translacaoY *= -1;
+    rotacao += 180.0f;
+}
+
 // Função callback chamada para gerenciar eventos de teclas
 void Teclado (unsigned char key, int x, int y)
 {
@@ -106,6 +112,10 @@ void Teclado (unsigned char key, int x, int y)
         transladar = 0;
         escalonar = 1;
     }
+    if(key == 'M' || key == 'm'){
+        espelharImagem();
+        glutPostRedisplay();        
+    }    
 }
 
 void TeclasEspecias(int key, int x, int y)
